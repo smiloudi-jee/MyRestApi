@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: "MyRestApi"
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  security:
+    user:
+      name: name
+      password: pwd
+
+conf:
+  db:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/MasterAnnonce
+    username: postgres
+    password: postgres
+    dialect: org.hibernate.dialect.PostgreSQL9Dialect
+    show_sql: true
+    default_schema: [public]
