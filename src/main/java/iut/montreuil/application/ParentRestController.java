@@ -8,6 +8,10 @@ import java.util.Objects;
 
 public abstract class ParentRestController {
 
+    protected String message = "SUCCESS";
+    protected TypeResponse typeResponse = TypeResponse.OK;
+    protected Object bean = null;
+
     protected ResponseEntity buildResponseEntity(Object o, TypeResponse typeResponse, String message) {
         if(TypeResponse.ERROR.equals(typeResponse))
             return ResponseEntity.internalServerError().body(buildResponse(o, typeResponse, message));

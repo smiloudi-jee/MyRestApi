@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class AnnonceRestController extends ParentRestController {
 
-    private String message = "SUCCESS";
-    private TypeResponse typeResponse = TypeResponse.OK;
-    private Object bean = null;
     @Autowired
     private IAnnonceServices services;
 
