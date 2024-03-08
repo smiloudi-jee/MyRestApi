@@ -25,10 +25,8 @@
         <postgres-driver.version>42.5.0</postgres-driver.version>
         <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
         <springfox-swagger3.version>3.0.0</springfox-swagger3.version>
-
         <cucumber.version>4.7.0</cucumber.version>
         <junit5.version>5.2.0</junit5.version>
-
         <start-class>iut.montreuil.Application</start-class>
     </properties>
 

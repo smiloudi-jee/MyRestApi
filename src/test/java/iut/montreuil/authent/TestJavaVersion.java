@@ -32,9 +32,8 @@ public class TestJavaVersion {
                 break;
             default:
                 System.out.print(" callDefaultMethod() ");
-        }
-        LocalTime localTimeFin = printDate();
-        return Duration.between(localTimeDebut, localTimeFin);
+        };
+        return Duration.between(localTimeDebut, printDate());
     }
 
     private static Duration switchJava17(String value) {
@@ -44,7 +43,6 @@ public class TestJavaVersion {
             case "B" -> System.out.print(" callMethod2() ");
             default -> System.out.print(" callDefaultMethod() ");
         }
-        LocalTime localTimeFin = printDate();
-        return Duration.between(localTimeDebut, localTimeFin);
+        return Duration.between(localTimeDebut, printDate());
     }
 }
