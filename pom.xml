@@ -27,6 +27,7 @@
         <springfox-swagger3.version>3.0.0</springfox-swagger3.version>
         <cucumber.version>4.7.0</cucumber.version>
         <junit5.version>5.2.0</junit5.version>
+        <commons-version>3.0</commons-version>
         <start-class>iut.montreuil.Application</start-class>
     </properties>
 
@@ -80,6 +81,12 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>${org.mapstruct.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

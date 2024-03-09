@@ -14,6 +14,13 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class BasicSecurityConfiguration {
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        return encoder;
+    }
+
     @Bean
     public InMemoryUserDetailsManager userDetailsService(PasswordEncoder passwordEncoder) {
         UserDetails user = User.withUsername("user")
@@ -35,6 +42,7 @@ public class BasicSecurityConfiguration {
                 .and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/swagger-ui/**").permitAll()
+                .antMatchers("/login/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -42,9 +50,4 @@ public class BasicSecurityConfiguration {
         return http.build();
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        return encoder;
-    }
 }
