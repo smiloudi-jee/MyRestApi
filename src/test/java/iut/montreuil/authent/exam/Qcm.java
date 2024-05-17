@@ -18,6 +18,6 @@ public class Qcm {
     private void q7(){
         String str1 = new String("Bob");
         String str2 = new String("Ali");
-        System.out.println(str1.echarAt(0) > str2.charAt(0));
+        System.out.println(str1.charAt(0) > str2.charAt(0));
     }
 }
