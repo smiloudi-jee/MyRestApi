@@ -20,7 +20,7 @@ public class Words {
 
     public static void methodOne() throws IOException {
         StringBuilder sb = new StringBuilder();
-        for (int length = 2; length <= 12; length++) {
+        for (int length = 4; length <= 10; length++) {
             sb.setLength(length);
             generate(sb, 0);
         }
