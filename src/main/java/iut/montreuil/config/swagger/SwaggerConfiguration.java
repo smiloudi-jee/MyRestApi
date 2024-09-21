@@ -16,6 +16,7 @@ import java.util.List;
 @Configuration
 public class SwaggerConfiguration {
 
+    // http://localhost:8081/swagger-ui/index.html
     public static final String AUTHORIZATION_HEADER = "Authorization";
 
     private ApiInfo apiInfo() {
