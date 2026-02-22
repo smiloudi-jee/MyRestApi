@@ -30,7 +30,8 @@ public class AnnonceEntity implements Serializable {
                     @org.hibernate.annotations.Parameter(name = "initial_value", value = "2"),
                     @org.hibernate.annotations.Parameter(name = "increment_size", value = "1")
             }
-    )    @Column(name = "ID")
+    )
+    @Column(name = "ID")
     private BigInteger id;
     @Column(name = "TITLE")
     private String title;
