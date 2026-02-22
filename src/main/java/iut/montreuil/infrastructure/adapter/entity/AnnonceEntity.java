@@ -5,6 +5,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigInteger;
 
@@ -18,6 +19,7 @@ import java.math.BigInteger;
 @Setter
 public class AnnonceEntity implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
